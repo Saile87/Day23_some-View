@@ -9,11 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        Button("Hello World") {
+//            print(type(of: self.body))
+        }
+        .frame(width: 200, height: 200)
+        .background(.red)
+        
+    }
+}
+
+struct MottoView: View {
+    let motto1 = Text("KnifePlanet")
+    let motto2 = Text("xcode.tips")
+    var body: some View {
         VStack {
-            Text("Hello")
-            Text("World")
-            Text("Goodbye")
-            Text("World")
+            motto1
+                .foregroundColor(.red)
+            motto2
+                .foregroundColor(.blue)
         }
     }
 }
@@ -23,3 +36,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
